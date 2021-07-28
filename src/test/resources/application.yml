@@ -1,20 +1,16 @@
 grpc:
   server:
-    port: ${GRPC_PORT:7080}
+    port: 7080
   client:
-    port: ${GRPC_PORT:7080}
+    port: 7080
     __name__:
-      adress: static://localhost:${GRPC_PORT:7080}
+      adress: static://localhost:7080
     channelShutdownTimeoutMs: 3000
 
+
 spring:
-  application:
-    name: ChallengeApplication
   main:
     banner-mode: off
-  jackson:
-    serialization:
-      fail-on-self-references: false
 
 logging:
   level:
@@ -22,5 +18,3 @@ logging:
     pro.utorg: debug
   pattern:
     console: '%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level %file:%line %msg%n'
-
-
